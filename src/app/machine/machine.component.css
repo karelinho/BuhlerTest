@@ -1,0 +1,31 @@
+app-machine,
+app-machine .machine-container {
+    width: 200px;
+    position: relative;
+}
+
+app-machine .machine-name {
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+app-machine .machine-container .machine-state {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+app-machine .machine-container.running {
+    background-color: #dcdcdc;
+}
+
+app-machine .machine-container.alarm {
+    background-color: red;
+    color: #FFFFFF;
+}
+
+app-machine .machine-container.warning {
+    background-color: orange;
+    color: #FFFFFF;
+}

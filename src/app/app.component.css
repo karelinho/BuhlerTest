@@ -1,0 +1,47 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.page-content {
+    padding: 20px;
+}
+
+.base-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.base-container .mat-toolbar {
+    padding: 10px 20px;
+    background-color: #dcdcdc;
+    border-bottom: 4px solid #00ab9d;
+}
+
+.buhler-logo {
+    width: 150px;
+}
+
+.account {
+    font-size: 16px;
+    padding: 5px 20px;
+}
+
+.account .account-name {
+    vertical-align: 6px;
+    padding: 0 5px;
+}
+
+.machines-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #dcdcdc;
+}
+
+.content-container {
+    height: 100%;
+}

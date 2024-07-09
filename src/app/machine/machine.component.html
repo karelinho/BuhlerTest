@@ -1,0 +1,14 @@
+<div class="machine-container" [ngClass]="setClass()">
+    <div class="machine-name">{{ name }}</div>
+    <div class="machine-state">
+        @if(isRunning(state)) {
+            <mat-icon>launch</mat-icon>
+        }
+        @if(isAlarm(state)) {
+            <mat-icon>info_outline</mat-icon>
+        }
+        @if(isWarning(state)) {
+            <mat-icon>warning_amber</mat-icon>
+        }
+    </div>
+</div>
