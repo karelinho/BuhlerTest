@@ -4,7 +4,7 @@
       <span class="example-spacer"></span>
       <div class="account">
         <mat-icon fontIcon="schedule"></mat-icon>
-        <span class="account-name">Operator</span>
+        <span class="account-name">{{ today | date:'dd.MM.YYYY HH:mm' }}</span>
       </div>
       <div class="account">
         <mat-icon fontIcon="account_circle"></mat-icon>
@@ -14,13 +14,16 @@
   <div class="main-content-container">
     <div class="machines-container">
       @for(machine of machines; track machine.name) {
-        <app-machine [name]="machine.name" [state]="machine.state">
-  
-        </app-machine>
+        <app-machine [name]="machine.name" [state]="machine.state"></app-machine>
       }
     </div>
     <div class="content-container">
-
+      @for(machine of machines; track machine.name; let last = $last) {
+        <app-machine [name]="machine.name" [state]="machine.state" [showIcon]="true"></app-machine>
+        @if(!last) {
+          <div class="divider"></div>
+        }
+      }
     </div>
   </div>
 </div>

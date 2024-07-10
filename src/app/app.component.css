@@ -34,6 +34,7 @@
 .account .account-name {
     vertical-align: 6px;
     padding: 0 5px;
+    font-weight: bold;
 }
 
 .machines-container {
@@ -43,5 +44,19 @@
 }
 
 .content-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.content-container .divider {
+    width: 100px;
+    border-bottom: 4px solid #00ab9d;
+}
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }

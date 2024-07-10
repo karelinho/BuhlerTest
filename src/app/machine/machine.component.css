@@ -14,6 +14,18 @@ app-machine .machine-container .machine-state {
     position: absolute;
     top: 0;
     right: 0;
+    padding: 2px;
+}
+
+app-machine .machine-container .machine-icon {
+    text-align: center;
+    padding: 10px 10px 0 10px;
+}
+
+app-machine .machine-container .machine-icon .mat-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
 }
 
 app-machine .machine-container.running {
