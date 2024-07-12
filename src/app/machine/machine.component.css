@@ -4,7 +4,7 @@ app-machine .machine-container {
     position: relative;
 }
 
-app-machine .machine-name {
+app-machine .machine-type {
     text-align: center;
     font-weight: bold;
     padding: 8px 0;

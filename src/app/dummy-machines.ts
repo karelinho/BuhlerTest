@@ -1,6 +1,6 @@
 
 export interface Machine {
-    name: string;
+    type: MachineType;
     state: MachineState;
 }
 
@@ -10,21 +10,28 @@ export enum MachineState {
     warning
 }
 
+export enum MachineType {
+    Scale = 'Scale',
+    Attacher = 'Attacher',
+    Packer = 'Packer',
+    Closer = 'Closer'
+}
+
 export const DUMMY_MACHINES: Machine[] = [
     {
-        name: 'Scale',
+        type: MachineType.Scale,
         state: MachineState.running
     },
     {
-        name: 'Attacher',
+        type: MachineType.Attacher,
         state: MachineState.alarm
     },
     {
-        name: 'Packer',
+        type: MachineType.Packer,
         state: MachineState.running
     },
     {
-        name: 'Closer',
+        type: MachineType.Closer,
         state: MachineState.warning
     }
 ];

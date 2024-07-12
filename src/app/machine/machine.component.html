@@ -1,21 +1,21 @@
 <div class="machine-container" [ngClass]="setStateClass()">
     @if(showIcon) {
         <div class="machine-icon">
-            @if((name | lowercase) === 'scale') {
+            @if(isScale(type)) {
                 <mat-icon>system_update_alt</mat-icon>
             }
-            @if((name | lowercase) === 'attacher') {
+            @if(isAttacher(type)) {
                 <mat-icon>wysiwyg</mat-icon>
             }
-            @if((name | lowercase) === 'packer') {
+            @if(isPacker(type)) {
                 <mat-icon>credit_card</mat-icon>
             }
-            @if((name | lowercase) === 'closer') {
+            @if(isCloser(type)) {
                 <mat-icon>calendar_view_week</mat-icon>
             }
         </div>
     }
-    <div class="machine-name">{{ name }}</div>
+    <div class="machine-type">{{ type }}</div>
     <div class="machine-state">
         @if(isRunning(state)) {
             <mat-icon>settings_backup_restore</mat-icon>

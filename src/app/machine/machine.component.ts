@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { MachineState } from '../dummy-machines';
+import { MachineState, MachineType } from '../dummy-machines';
 
 @Component({
   selector: 'app-machine',
@@ -10,9 +10,9 @@ import { MachineState } from '../dummy-machines';
 })
 export class MachineComponent {
   /**
-   * Machine name.
+   * Machine type.
    */
-  @Input({required: true}) name!: string;
+  @Input({required: true}) type!: MachineType;
 
   /**
    * Machine state.
@@ -34,6 +34,42 @@ export class MachineComponent {
       'alarm' : this.state === MachineState.alarm,
       'warning' : this.state === MachineState.warning
     };
+  }
+
+  /**
+   * Returms whether the machine is of type Scale.
+   * @param type machine type
+   * @returns true when type is Scale
+   */
+  public isScale(type: MachineType) {
+    return type === MachineType.Scale;
+  }
+
+  /**
+   * Returms whether the machine is of type Attacher.
+   * @param type machine type
+   * @returns true when type is Attacher
+   */
+  public isAttacher(type: MachineType) {
+    return type === MachineType.Attacher;
+  }
+
+  /**
+   * Returms whether the machine is of type Packer.
+   * @param type machine type
+   * @returns true when type is Packer
+   */
+  public isPacker(type: MachineType) {
+    return type === MachineType.Packer;
+  }
+
+  /**
+   * Returms whether the machine is of type Closer.
+   * @param type machine type
+   * @returns true when type is Closer
+   */
+  public isCloser(type: MachineType) {
+    return type === MachineType.Closer;
   }
 
   /**

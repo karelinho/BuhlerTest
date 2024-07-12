@@ -13,13 +13,13 @@
   </mat-toolbar>
   <div class="main-content-container">
     <div class="machines-container">
-      @for(machine of machines; track machine.name) {
-        <app-machine [name]="machine.name" [state]="machine.state"></app-machine>
+      @for(machine of machines; track $index) {
+        <app-machine [type]="machine.type" [state]="machine.state"></app-machine>
       }
     </div>
     <div class="content-container">
-      @for(machine of machines; track machine.name; let last = $last) {
-        <app-machine [name]="machine.name" [state]="machine.state" [showIcon]="true"></app-machine>
+      @for(machine of machines; track $index; let last = $last) {
+        <app-machine [type]="machine.type" [state]="machine.state" [showIcon]="true"></app-machine>
         @if(!last) {
           <div class="divider"></div>
         }
